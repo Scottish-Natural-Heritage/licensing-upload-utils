@@ -1,5 +1,5 @@
 {
-  "name": "naturescot-upload-utils",
+  "name": "@naturescot/licensing-upload-utils",
   "version": "0.1.0",
   "description": "Utilities to support integration of Licensing services with the File Upload application",
   "main": "index.js",
