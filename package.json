@@ -1,6 +1,6 @@
 {
   "name": "@naturescot/licensing-upload-utils",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Utilities to support integration of Licensing services with the File Upload application",
   "keywords": [
     "naturescot",
@@ -9,12 +9,16 @@
   ],
   "main": "lib/index.js",
   "files": [
-    "lib/**/*"
+    "/lib",
+    "!/lib/**/*.test.js",
+    "!/lib/**/*.test.d.ts"
   ],
   "directories": {
     "lib": "lib"
   },
   "scripts": {
+    "clean": "rm -rf lib coverage",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "lint:spelling": "cspell \"{src/**/*.ts,**/*.json}\"",
     "lint:code": "xo",
