@@ -44,4 +44,18 @@ type UploadConfig = {
   sessionKey?: string;
 };
 
+/**
+ * Creates and returns a default instance of an UploadConfig.
+ *
+ * @returns {UploadConfig} A default instance of an UploadConfig.
+ */
+const getDefaultUploadConfig = (): UploadConfig => ({
+  serviceName: 'NatureScot Licensing',
+  optionalUploads: false,
+  files: [],
+  backUrl: '/error',
+  returnUrl: '/error',
+});
+
 export type {UploadedFileMetadata, UploadFileConfig, UploadConfig};
+export {getDefaultUploadConfig};

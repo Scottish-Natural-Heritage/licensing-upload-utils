@@ -1,6 +1,6 @@
 {
   "name": "@naturescot/licensing-upload-utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Utilities to support integration of Licensing services with the File Upload application",
   "keywords": [
     "naturescot",
@@ -21,7 +21,7 @@
     "lint": "npm run lint:spelling && npm run lint:code",
     "pretest": "npm run build",
     "test": "npm run test:unit",
-    "test:unit": "c8 --all --check-coverage --lines 1 ava"
+    "test:unit": "c8 --all --src \"src/**/*.ts\" --check-coverage --lines 1 ava --verbose"
   },
   "author": "Dominic Lynch",
   "license": "(MIT OR OGL-UK-3.0 OR Apache-2.0)",
