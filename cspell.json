@@ -1,0 +1,16 @@
+{
+  "version": "0.1",
+  "language": "en-GB",
+  "words": [
+    "editorconfig",
+    "naturescot",
+    "parens",
+    "govuk"
+  ],
+  "ignorePaths": [
+    "node_modules/**/*",
+    "lib/**/*",
+    "package-lock.json",
+    "coverage/**/*"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "@naturescot/licensing-upload-utils",
+  "version": "0.1.4",
+  "description": "Utilities to support integration of Licensing services with the File Upload application",
+  "keywords": [
+    "naturescot",
+    "licensing",
+    "upload"
+  ],
+  "main": "lib/index.js",
+  "files": [
+    "/lib",
+    "!/lib/**/*.test.js",
+    "!/lib/**/*.test.d.ts"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "clean": "rm -rf lib coverage",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "lint:spelling": "cspell \"{src/**/*.ts,**/*.json}\"",
+    "lint:code": "xo",
+    "lint": "npm run lint:spelling && npm run lint:code",
+    "pretest": "npm run build",
+    "test": "npm run test:unit",
+    "test:unit": "c8 --all --src \"src/**/*.ts\" --check-coverage --lines 1 ava --verbose"
+  },
+  "author": "Dominic Lynch",
+  "license": "(MIT OR OGL-UK-3.0 OR Apache-2.0)",
+  "homepage": "https://github.com/Scottish-Natural-Heritage/naturescot-upload-utils",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Scottish-Natural-Heritage/naturescot-upload-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Scottish-Natural-Heritage/naturescot-upload-utils/issues"
+  },
+  "devDependencies": {
+    "@ava/typescript": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.40.1",
+    "ava": "^5.0.1",
+    "c8": "^7.12.0",
+    "cspell": "^6.12.0",
+    "eslint-plugin-editorconfig": "^4.0.2",
+    "eslint-plugin-jsdoc": "^39.3.23",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "xo": "^0.52.4"
+  },
+  "xo": {
+    "space": 2,
+    "prettier": true,
+    "plugins": [
+      "jsdoc",
+      "editorconfig"
+    ],
+    "extends": [
+      "plugin:jsdoc/recommended",
+      "plugin:editorconfig/all",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    ],
+    "rules": {
+      "jsdoc/check-examples": "off",
+      "jsdoc/check-indentation": 1,
+      "jsdoc/check-syntax": 1,
+      "jsdoc/match-description": 1,
+      "jsdoc/require-description": 1,
+      "jsdoc/require-description-complete-sentence": 1,
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "ts": "never"
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "bracketSpacing": false,
+    "trailingComma": "all"
+  },
+  "ava": {
+    "typescript": {
+      "rewritePaths": {
+        "src/": "lib/"
+      },
+      "compile": false
+    }
+  }
+}
