@@ -18,12 +18,14 @@ type UploadedFileMetadata = {
  * @property {string} hint  Text to display with more detail on what to upload.
  * @property {string} descriptor  Text to display describing content of file.
  * @property {UploadedFileMetadata} metadata  The metadata of the file once it has been uploaded.
+ * @property {Record<string, string>} appMetadata  Metadata fields to be stored with the file in S3.
  */
 type UploadFileConfig = {
   instruction: string;
   hint: string;
   descriptor: string;
   metadata?: UploadedFileMetadata;
+  appMetadata?: Record<string, string>;
 };
 
 /**

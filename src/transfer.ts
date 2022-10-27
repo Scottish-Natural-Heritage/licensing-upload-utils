@@ -1,13 +1,13 @@
 /**
- * @typedef {object} TransferredFile Represents a file that has been transferred to Objective Connect.
+ * @typedef {object} TransferredFileInfo Represents information on a file that has been transferred to Objective Connect.
  * @property {string} uuid  The identifier of the file in Objective Connect.
  * @property {string} fileName  The name of the transferred file.
- * @property {string} descriptor  A unique identifier describing the content of the file.
+ * @property {Record<string, string>} appMetadata  Metadata fields stored with the file in S3.
  */
-type TransferredFile = {
+type TransferredFileInfo = {
   uuid: string;
   fileName: string;
-  descriptor: string;
+  appMetadata?: Record<string, string>;
 };
 
-export type {TransferredFile};
+export type {TransferredFileInfo};

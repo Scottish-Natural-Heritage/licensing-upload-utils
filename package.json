@@ -1,6 +1,6 @@
 {
   "name": "@naturescot/licensing-upload-utils",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "description": "Utilities to support integration of Licensing services with the File Upload application",
   "keywords": [
     "naturescot",
