@@ -1,6 +1,6 @@
 {
   "name": "@naturescot/licensing-upload-utils",
-  "version": "0.1.4",
+  "version": "0.1.8",
   "description": "Utilities to support integration of Licensing services with the File Upload application",
   "keywords": [
     "naturescot",
@@ -27,7 +27,9 @@
     "test": "npm run test:unit",
     "test:unit": "c8 --all --src \"src/**/*.ts\" --check-coverage --lines 1 ava --verbose"
   },
-  "author": "Dominic Lynch",
+  "contributors": [
+    "Dominic Lynch <dominic.lynch@nature.scot>"
+  ],
   "license": "(MIT OR OGL-UK-3.0 OR Apache-2.0)",
   "homepage": "https://github.com/Scottish-Natural-Heritage/naturescot-upload-utils",
   "repository": {
