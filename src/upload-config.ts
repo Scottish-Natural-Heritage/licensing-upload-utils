@@ -44,6 +44,7 @@ type UploadConfig = {
   backUrl: string;
   returnUrl: string;
   sessionKey?: string;
+  isNewApplication?: boolean;
 };
 
 /**
