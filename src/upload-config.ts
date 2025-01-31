@@ -36,6 +36,8 @@ type UploadFileConfig = {
  * @property {string} backUrl  The URL to send the user back to if the user clicks "back" link.
  * @property {string} returnUrl  The URL to send the user back to upon completion of the file uploads.
  * @property {string} sessionKey  The session ID that identifies the uploaded files in S3.
+ * @property {string} isNewApplication  Whether we want to treat this as a new application.
+ * @property {string} multiple  Whether we want to accept multiple files (default false).
  */
 type UploadConfig = {
   serviceName: string;
@@ -45,6 +47,7 @@ type UploadConfig = {
   returnUrl: string;
   sessionKey?: string;
   isNewApplication?: boolean;
+  multiple?: boolean;
 };
 
 /**
