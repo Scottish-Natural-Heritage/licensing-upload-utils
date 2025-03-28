@@ -22,7 +22,8 @@ type UploadedFileMetadata = {
  */
 type UploadFileConfig = {
   instruction: string;
-  hint: string;
+  hint?: string;
+  hintHtml?: string;
   descriptor: string;
   metadata?: UploadedFileMetadata;
   appMetadata?: Record<string, string>;
