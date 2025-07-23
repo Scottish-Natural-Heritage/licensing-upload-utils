@@ -2,4 +2,6 @@ export type {UploadConfig, UploadedFileMetadata, UploadFileConfig} from './uploa
 
 export type {TransferredFileInfo} from './transfer';
 
+export type {ObjectiveRef} from './findOrCreate';
+
 export {getDefaultUploadConfig} from './upload-config';
